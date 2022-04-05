@@ -1,0 +1,80 @@
+# [ec2-user@ip-172-31-9-43 ~]$ docker inspect bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "0df0719c5fc8b8fbb57331bc791e3098b7a4adad1af620b5a3f519f08ab10751",
+        "Created": "2022-04-05T07:56:20.321771091Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "be5b6f94849186e150472669d1c3747b3c7bd85fe3b9e09ca86526834657d635": {
+                "Name": "logstash-users-ws",
+                "EndpointID": "e82de941ca06a585fdafcc0cc24f60c59a963bc47548a0a1168137b122770423",
+                "MacAddress": "02:42:ac:11:00:02",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+# [ec2-user@ip-172-31-9-43 ~]$ docker inspect host
+[
+    {
+        "Name": "host",
+        "Id": "ebb59c3f98a4ca738d3ae22ddea6612758d848503281d2dde4c6f1ff5ee75ff4",
+        "Created": "2022-03-22T05:14:32.609140019Z",
+        "Scope": "local",
+        "Driver": "host",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": []
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "04db277c48fca4883030dd08df95ac429f96676b0b6dda988292dc0550b1b051": {
+                "Name": "new-user-msv",
+                "EndpointID": "64d133ce29b8ce9eaea901f95e2a545ddc2c6fe6e04579dca6b9b40b51a4b722",
+                "MacAddress": "",
+                "IPv4Address": "",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
